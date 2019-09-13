@@ -1,0 +1,19 @@
+{
+  "name": "claro-brasil-challenge-backend-nodejs",
+  "version": "1.0.0",
+  "description": "API",
+  "main": "index.js",
+  "repository": "https://github.com/ALexsanderMarlonX/claro-brasil-challenge-backend-nodejs",
+  "author": "Alexsander M",
+  "license": "MIT",
+  "dependencies": {
+    "add": "^2.0.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sha256": "^0.2.0",
+    "yarn": "^1.17.3"
+  }
+}
