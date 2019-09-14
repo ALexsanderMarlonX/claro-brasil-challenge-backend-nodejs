@@ -6,7 +6,7 @@ const routes = express.Router();
 
 const UserRegisterControl = require('./src/controllers/UserRegisterControl');
 const UserAddDeviceControl = require('./src/controllers/UserAddDeviceControl');
-const Controlls = require('./src/controllers/Controlls');
+const Controlls = require('./src/controllers/Controls');
 
 routes.post('/:userId/add/device', UserAddDeviceControl.store);
 routes.post('/user/register', UserRegisterControl.store);

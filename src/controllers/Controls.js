@@ -42,17 +42,17 @@ module.exports = {
             message: 'Device not found'
           });
         }
-      
+        
         let session = await Session.findOne({ createdby: req.user._id });  
         if(session.listDevices.length === 1) {
           return res.json({msg: 'cannot have less than one device registered'})
         }
         let inSession = session.listDevices.indexOf(device._id);
         let deviceToRemove = session.listDevices[inSession];
-      
+
         return await Session.updateOne(
-            { createdby: req.user._id },
-            { $pull: { listDevices: { $in: [deviceToRemove] } } }
+          { createdby: req.user._id },
+         { $pull: { listDevices: { $in: [deviceToRemove] } } }
         ).then(() => res.json({ msg: 'Device deleted' })).catch(err => console.error(err));
       
       }
